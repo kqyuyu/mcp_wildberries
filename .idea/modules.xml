@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/wildberriesmcp.iml" filepath="$PROJECT_DIR$/.idea/wildberriesmcp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mcp_wildberries.iml" filepath="$PROJECT_DIR$/.idea/mcp_wildberries.iml" />
     </modules>
   </component>
 </project>
