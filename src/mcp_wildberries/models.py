@@ -52,7 +52,7 @@ class ParameterSchema(BaseModel):
     in_location: ParameterLocation = Field(..., alias="in", description="Где находится параметр")
     required: bool = Field(default=False, description="Обязательный ли параметр")
     description: str = Field(default="", description="Описание параметра")
-    schema: Dict[str, Any] = Field(default_factory=dict, description="JSON Schema")
+    json_schema: Dict[str, Any] = Field(default_factory=dict, description="JSON Schema")
     example: Optional[Any] = Field(None, description="Пример значения")
     examples: Optional[Dict[str, Any]] = Field(None, description="Примеры значений")
     deprecated: bool = Field(default=False, description="Устаревший ли параметр")
@@ -110,7 +110,7 @@ class WBMethod(BaseModel):
     deprecated: bool = Field(default=False, description="Устаревший ли метод")
     safety: SafetyType = Field(..., description="Тип безопасности (read/write/destructive)")
     servers: List[Server] = Field(default_factory=list, description="Серверы для метода")
-    security: List[SecurityRequirement] = Field(default_factory=list, description="Требования безопасности")
+    security: Optional[Any] = Field(default_factory=list, description="Требования безопасности")
 
     # Wildberries специфичные поля
     x_readonly: bool = Field(default=False, description="Только для чтения")
